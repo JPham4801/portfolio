@@ -6,8 +6,8 @@
 
 :root {
   --background: #ffffff;
-  --main-accent: #CDC5EE;
-  --main-accent-light: #E6E6FA;
+  --primary-accent: #CDC5EE;
+  --secondary-accent: #E6E6FA;
   --text: #000000;
   --link: #636b72;
   --link-hover: #00ccff;
@@ -38,7 +38,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.8rem 1.8rem;
+  padding: 0.5rem 1.8rem;
   background-color: var(--background);
   border-bottom: 1px solid var(--border);
 }
@@ -47,6 +47,9 @@ nav div ul {
   display: flex;
   flex-direction: row;
   gap: 1rem;
+  list-style: none;
+  font-size: 18px;
+  font-weight: bold;
 }
 
 a {
@@ -61,7 +64,7 @@ a:hover {
 }
 
 a:focus {
-  outline: 2px solid var(--link);
+  outline: none;
   outline-offset: 2px;
 }
 
@@ -73,39 +76,66 @@ li {
   list-style: none;
 }
 
-.hero {
+.hero-section {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
   padding: 2rem 1.5rem;
+  background-color: gray;
 }
 
-.hero h1 {
+.hero-section h1 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
 }
 
-.hero p {
+.hero-section p {
   font-size: 1.2rem;
   margin-bottom: 1.5rem;
 }
 
-.hero a {
+.hero-section button {
   padding: 0.8rem 1.5rem;
-  background-color: var(--link);
+  background-color: black;
   color: var(--background);
+  border: none;
   border-radius: 0.5rem;
   font-size: 1rem;
 }
 
-.hero a:hover {
-  background-color: var(--link-hover);
+.hero-section button:hover {
+  background-color: darkgray;
   transition: background-color 0.3s ease;
 }
 
-.hero a:focus {
+.hero-section button:focus {
   outline: 2px solid var(--link);
   outline-offset: 2px;
+}
+
+.hero-description {
+  font-size: 1rem;
+  margin-top: 1rem;
+  color: var(--text);
+  max-width: 600px;
+  text-align: center;
+  line-height: 1.5;
+  padding: 0 1rem;
+}
+
+.about-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 10rem;
+  background-color: var(--background);
+  text-align: center;
+  margin: 1.5rem 0;
+}
+
+.project-section {
+  
 }
