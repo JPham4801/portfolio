@@ -1,97 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome to my Portfolio</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/carousel.css" />
+    <script defer src="./js/app.js"></script>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Welcome to my Portfolio</title>
-  <link rel="stylesheet" href="./css/style.css" />
-  <link rel="stylesheet" href="./css/carousel.css" />
-  <script defer src="./js/app.js"></script>
-</head>
+  <body>
+    <nav>
+      <h1>John Pham</h1>
+      <div>
+        <ul>
+          <li>
+            <a href="#about">About</a>
+          </li>
+          <li>
+            <a href="#projects">Portfolio</a>
+          </li>
+          <li>
+            <a href="#contacts">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
 
-<body>
-  <nav>
-    <h1>John Pham</h1>
-    <div>
-      <ul>
-        <li>
-          <a href="#about">About</a>
-        </li>
-        <li>
-          <a href="#projects">Projects</a>
-        </li>
-        <li>
-          <a href="#contacts">Contact</a>
-        </li>
-      </ul>
-    </div>
-  </nav>
-
-  <section class="hero-section">
-    <div class="header-content">
-      <img src="./assets/images/memoji.png" alt="John Pham" />
-      <h3>Hi, I'm John ✌</h3>
-    </div class="header-content">
-    <div class="hero-content">
-      <h1 class="hero-title">I'm a Software Engineer</h1>
-      <p class="hero-description">
-        I am a software engineer with a passion for building web applications
-        and solving complex problems. I love to learn new technologies and
-        improve my skills.
-      </p>
+    <section class="hero-section">
+      <div class="header-content">
+        <img src="./assets/images/memoji.png" alt="John Pham" />
+        <h2>Hi, I'm John ✌</h2>
+      </div>
+      <h1 class="hero-header">
+        I am a
+        <a
+          href=""
+          class="typewrite"
+          data-period="2000"
+          data-type='[ "Full-Stack Web Developer", "Software Engineer", "Creator", "Designer" ]'
+        >
+          <span class="wrap"></span>
+        </a>
+        <span class="cursor"></span>
+      </h1>
       <button href="#connect" class="btn">Connect with me</button>
-  </section>
+    </section>
 
-  <section class="project-section" id="projects">
-    <h1 class="section-header">Portfolio</h1>
-    <div class="carousel">
-      <ul class="carousel__list">
-        <li class="carousel__item" data-pos="-2">
-          <img src="./assets/images/Wordle.png" alt="Image 1" />
-        </li>
-        <li class="carousel__item" data-pos="-1">
-          <img src="./assets/images/Cat-collector.png" alt="Image 1" />
-        </li>
-        <li class="carousel__item" data-pos="0">
-          <img src="./assets/images/Petsy.png" alt="Image 1" />
-        </li>
-        <li class="carousel__item" data-pos="1">
-          <img src="./assets/images/myPOV.png" alt="Image 1" />
-        </li>
-        <li class="carousel__item" data-pos="2">
-          <img src="./assets/images/Task-buddy.png" alt="Image 1" />
-        </li>
-      </ul>
-    </div>
-  </section>
+    <section class="project-section section" id="projects">
+      <h1 class="section-header">Portfolio</h1>
+      <div class="carousel">
+        <ul class="carousel__list">
+          <li class="carousel__item" data-pos="-2">
+            <img src="./assets/images/Petsy.png" alt="Image 1" />
+          </li>
+          <li class="carousel__item" data-pos="-1">
+            <img src="./assets/images/Cat-collector.png" alt="Image 1" />
+          </li>
+          <li class="carousel__item" data-pos="0">
+            <img src="./assets/images/Wordle.png" alt="Image 1" />
+          </li>
+          <li class="carousel__item" data-pos="1">
+            <img src="./assets/images/myPOV.png" alt="Image 1" />
+          </li>
+          <li class="carousel__item" data-pos="2">
+            <img src="./assets/images/Task-buddy.png" alt="Image 1" />
+          </li>
+        </ul>
+      </div>
+    </section>
 
-  <section class="about-section" id="about">
-    <h1 class="section-header">About Me</h1>
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias quod quaerat nemo nisi expedita veniam quam ipsa
-      blanditiis enim ducimus veritatis suscipit, molestiae ipsum. Inventore corrupti maxime quod animi natus.
-    </p>
-  </section>
+    <section class="about-section section" id="about">
+      <h1 class="section-header">About Me</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias quod quaerat nemo nisi expedita veniam quam ipsa
+        blanditiis enim ducimus veritatis suscipit, molestiae ipsum. Inventore corrupti maxime quod animi natus.
+      </p>
+    </section>
 
-  <section class="skill-section" id="skills">
-    <h1 class="section-header">Skills</h1>
-    <h2>Front-End</h2>
-    <ul class="skill-content">
-      <li class="skill-card">
-        <img src="./assets/icons/html.png" alt="html icon">
-        <h3>HTML</h3>
-      </li>
-      <li class="skill-card">
-        <img src="./assets/icons/html.png" alt="html icon">
-        <h3>HTML</h3>
-      </li>
-      <li class="skill-card">
-        <img src="./assets/icons/html.png" alt="html icon">
-        <h3>HTML</h3>
-      </li>
-    </ul>
-  </section>
-</body>
-
+    <section class="skill-section section" id="skills">
+      <h1 class="section-header">Skills</h1>
+      <div class="skill-content">
+        <h2>Front-End</h2>
+        <ul>
+          <li class="skill-card">
+            <img
+              src="https://img.shields.io/badge/JAVASCRIPT-yellow?style=for-the-badge&logo=javascript&logoColor=white&labelColor=black"
+              alt=""
+            />
+          </li>
+          <li class="skill-card">
+            <img
+              src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB"
+              alt=""
+            />
+          </li>
+          <li class="skill-card">
+            <img
+              src="https://img.shields.io/badge/HTML-green?style=for-the-badge&logo=HTML5&logoColor=white&labelColor=black"
+              alt=""
+            />
+          </li>
+          <li class="skill-card">
+            <img
+              src="https://img.shields.io/badge/CSS-blue?style=for-the-badge&logo=CSS3&logoColor=white&labelColor=black"
+              alt=""
+            />
+          </li>
+        </ul>
+      </div>
+      <div class="skill-content">
+        <h2>Back-End</h2>
+        <ul>
+          <li class="skill-card">
+            <img
+              src="https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54"
+              alt=""
+            />
+          </li>
+          <li class="skill-card">
+            <img
+              src="https://img.shields.io/badge/node.js-339933?style=for-the-badge&logo=Node.js&logoColor=white"
+              alt=""
+            />
+          </li>
+          <li class="skill-card">
+            <img
+              src="https://img.shields.io/badge/express.js-000000?style=for-the-badge&logo=express&logoColor=white"
+              alt=""
+            />
+          </li>
+        </ul>
+      </div>
+      <div class="skill-content">
+        <h2>Databases</h2>
+        <ul>
+          <li class="skill-card">
+            <img
+              src="https://img.shields.io/badge/-MongoDB-13aa52?style=for-the-badge&logo=mongodb&logoColor=white"
+              alt=""
+            />
+          </li>
+          <li class="skill-card">
+            <img
+              src="https://img.shields.io/badge/postgresql-4169e1?style=for-the-badge&logo=postgresql&logoColor=white"
+              alt=""
+            />
+          </li>
+        </ul>
+      </div>
+    </section>
+    <footer></footer>
+  </body>
 </html>
