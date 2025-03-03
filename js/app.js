@@ -1,6 +1,10 @@
 const carouselList = document.querySelector('.carousel__list');
 const carouselItems = document.querySelectorAll('.carousel__item');
 const elems = Array.from(carouselItems);
+const items = Array.from(carouselList.children);
+const prevButton = document.querySelector('.carousel__nav--prev');
+const nextButton = document.querySelector('.carousel__nav--next');
+const descriptionText = document.getElementById('carousel-description-text');
 
 // typewriter effect
 
@@ -55,6 +59,22 @@ carouselList.addEventListener('click', function (event) {
   if (!newActive || newActive.classList.contains('carousel__item_active')) {
     return;
   }
+
+  // Retrieve and log the position of the clicked item
+
+  // Convert data-pos to a number
+  const position = Number(newActive.dataset.pos);
+
+  // Check if position is 0
+  if (position === 0) {
+    const url = newActive.dataset.url;
+    if (url) {
+      window.open(url, '_blank');
+    } else {
+      console.error('URL not found for the clicked item.');
+    }
+  }
+
   update(newActive);
 });
 
@@ -73,6 +93,9 @@ function update(newActive) {
     const itemPos = item.dataset.pos;
     item.dataset.pos = getPos(itemPos, newActivePos);
   });
+
+  // Update description for the new active item
+  descriptionText.textContent = newActive.getAttribute('data-description');
 }
 
 function getPos(current, active) {
@@ -83,6 +106,35 @@ function getPos(current, active) {
   return diff;
 }
 
+function updatePositions(direction) {
+  items.forEach((item) => {
+    let currentPos = parseInt(item.getAttribute('data-pos'));
+    let newPos = direction === 'next' ? currentPos - 1 : currentPos + 1;
+
+    // Wrap around the positions
+    if (newPos < -2) {
+      newPos = 2;
+    } else if (newPos > 2) {
+      newPos = -2;
+    }
+
+    item.setAttribute('data-pos', newPos);
+
+    // Update description for the active item
+    if (newPos === 0) {
+      descriptionText.textContent = item.getAttribute('data-description');
+    }
+  });
+}
+
+prevButton.addEventListener('click', () => {
+  updatePositions('prev');
+});
+
+nextButton.addEventListener('click', () => {
+  updatePositions('next');
+});
+
 window.onload = () => {
   const elements = document.getElementsByClassName('typewrite');
   for (let i = 0; i < elements.length; i++) {
@@ -91,5 +143,12 @@ window.onload = () => {
     if (toRotate) {
       new TxtType(elements[i], JSON.parse(toRotate), period);
     }
+  }
+
+  // Set initial description
+
+  const activeItem = items.find((item) => parseInt(item.getAttribute('data-pos')) === 0);
+  if (activeItem) {
+    descriptionText.textContent = activeItem.getAttribute('data-description');
   }
 };

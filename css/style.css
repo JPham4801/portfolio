@@ -179,14 +179,6 @@ button:active {
   /* padding-bottom: 0.5rem; */
 }
 
-/* project section styling start */
-
-.project-section{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 /* skills section styling start */
 
 .skill-section {
