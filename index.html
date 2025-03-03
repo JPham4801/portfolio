@@ -1,51 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>John Pham</title>
-    <link rel="stylesheet" href="./css/style.css" />
-    <script defer src="./js/app.js"></script>
-  </head>
-  <body>
-    <nav>
-      <h1>John Pham</h1>
-      <div>
-        <ul>
-          <li>
-            <a href="#about">About</a>
-          </li>
-          <li>
-            <a href="#projects">Projects</a>
-          </li>
-          <li>
-            <a href="#contacts">Contact</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-    <section class="hero-section">
-      <div class="header-content">
-        <img src="./assets/images/memoji.png" alt="John Pham" />
-        <h3>Hi, I'm John ✌</h3>
-      </div class="header-content">
-      <div class="hero-content">
-        <h1 class="hero-title">I'm a Software Engineer</h1>
-        <p class="hero-description">
-          I am a software engineer with a passion for building web applications
-          and solving complex problems. I love to learn new technologies and
-          improve my skills.
-        </p>
-        <button href="#connect" class="btn">Connect with me</button>
-    </section>
-    <section class="about-section" id="about">
-      <h1>About Me</h1>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias quod quaerat nemo nisi expedita veniam quam ipsa blanditiis enim ducimus veritatis suscipit, molestiae ipsum. Inventore corrupti maxime quod animi natus.
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Welcome to my Portfolio</title>
+  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="./css/carousel.css" />
+  <script defer src="./js/app.js"></script>
+</head>
+
+<body>
+  <nav>
+    <h1>John Pham</h1>
+    <div>
+      <ul>
+        <li>
+          <a href="#about">About</a>
+        </li>
+        <li>
+          <a href="#projects">Projects</a>
+        </li>
+        <li>
+          <a href="#contacts">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="hero-section">
+    <div class="header-content">
+      <img src="./assets/images/memoji.png" alt="John Pham" />
+      <h3>Hi, I'm John ✌</h3>
+    </div class="header-content">
+    <div class="hero-content">
+      <h1 class="hero-title">I'm a Software Engineer</h1>
+      <p class="hero-description">
+        I am a software engineer with a passion for building web applications
+        and solving complex problems. I love to learn new technologies and
+        improve my skills.
       </p>
-    <section class="project-section" id="projects">
-      <h1>Projects</h1>
-      <img src="https://placehold.co/400x300" alt="placeholder">
-    </section>
-  </body>
+      <button href="#connect" class="btn">Connect with me</button>
+  </section>
+
+  <section class="project-section" id="projects">
+    <h1 class="section-header">Portfolio</h1>
+    <div class="carousel">
+      <ul class="carousel__list">
+        <li class="carousel__item" data-pos="-2">
+          <img src="./assets/images/Wordle.png" alt="Image 1" />
+        </li>
+        <li class="carousel__item" data-pos="-1">
+          <img src="./assets/images/Cat-collector.png" alt="Image 1" />
+        </li>
+        <li class="carousel__item" data-pos="0">
+          <img src="./assets/images/Petsy.png" alt="Image 1" />
+        </li>
+        <li class="carousel__item" data-pos="1">
+          <img src="./assets/images/myPOV.png" alt="Image 1" />
+        </li>
+        <li class="carousel__item" data-pos="2">
+          <img src="./assets/images/Task-buddy.png" alt="Image 1" />
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="about-section" id="about">
+    <h1 class="section-header">About Me</h1>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias quod quaerat nemo nisi expedita veniam quam ipsa
+      blanditiis enim ducimus veritatis suscipit, molestiae ipsum. Inventore corrupti maxime quod animi natus.
+    </p>
+  </section>
+
+  <section class="skill-section" id="skills">
+    <h1 class="section-header">Skills</h1>
+    <h2>Front-End</h2>
+    <ul class="skill-content">
+      <li class="skill-card">
+        <img src="./assets/icons/html.png" alt="html icon">
+        <h3>HTML</h3>
+      </li>
+      <li class="skill-card">
+        <img src="./assets/icons/html.png" alt="html icon">
+        <h3>HTML</h3>
+      </li>
+      <li class="skill-card">
+        <img src="./assets/icons/html.png" alt="html icon">
+        <h3>HTML</h3>
+      </li>
+    </ul>
+  </section>
+</body>
+
 </html>

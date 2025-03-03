@@ -6,7 +6,7 @@
 
 :root {
   --background: #ffffff;
-  --primary-accent: #CDC5EE;
+  --primary-accent: #DAD7E5;
   --secondary-accent: #E6E6FA;
   --text: #000000;
   --link: #636b72;
@@ -15,7 +15,7 @@
 }
 
 html {
-  /* color-scheme: light dark; */
+  height: 100vh;
 }
 
 body {
@@ -25,7 +25,7 @@ body {
   line-height: 1.5;
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  height: 100vh;
 }
 
 body header {
@@ -76,19 +76,15 @@ li {
   list-style: none;
 }
 
+/* hero section style start */
 .hero-section {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 2rem 1.5rem;
-  background-color: gray;
-}
-
-.hero-section h1 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
+  padding: 6rem 1.5rem;
+  background-color: var(--primary-accent);
 }
 
 .hero-section p {
@@ -125,17 +121,81 @@ li {
   padding: 0 1rem;
 }
 
-.about-section {
+/* sections style start */
+section {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  padding: 2rem 10rem;
-  background-color: var(--background);
+  align-items: center;
   text-align: center;
-  margin: 1.5rem 0;
+  padding: 2rem 1.5rem;
 }
 
-.project-section {
-  
+section p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
 }
+
+section h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+section h2 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.section-header {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+/* skill section style start */
+.skill-section h2 {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.skill-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Center content */
+  flex-direction: row;
+  gap: 20px; /* Space between items */
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+}
+
+.skill-card {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: black;
+  color: var(--background);
+  border-radius: 0.5rem;
+  padding: 0.5rem 0.7rem;
+  gap: 10px;
+  margin: 12px;
+}
+
+.skill-card img {
+  width: 30px;
+  height: 30px;
+}
+
+/* project section style start */
+/* .project-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem 1.5rem;
+} */
