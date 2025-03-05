@@ -160,4 +160,16 @@
   .carousel__item {
     width: 100px;
   }
+
+  .carousel__nav {
+    font-size: 5rem;
+    top: 95%;
+    height: 40%;
+  }
+  .carousel__nav--prev {
+    left: calc(96% - 240px - 100px);
+  }
+  .carousel__nav--next {
+    right: calc(96% - 240px - 100px);
+  }
 }
