@@ -3,25 +3,24 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Welcome to my Portfolio</title>
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/carousel.css" />
+    <link rel="stylesheet" href="./css/modal.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v3.0.6/css/line.css" />
     <script defer src="./js/app.js"></script>
+    <title>Welcome to my Portfolio</title>
   </head>
 
   <body>
     <nav>
-      <h1>John Pham</h1>
       <div>
         <ul>
           <li>
-            <a href="#about">About</a>
+            <a href="#portfolio">Portfolio</a>
           </li>
           <li>
-            <a href="#projects">Portfolio</a>
-          </li>
-          <li>
-            <a href="#contacts">Contact</a>
+            <a href="#about">About Me</a>
           </li>
         </ul>
       </div>
@@ -36,7 +35,7 @@
         I am a
         <a
           href=""
-          class="typewrite"
+          class="typewrite disabled-link"
           data-period="2000"
           data-type='[ "Full-Stack Web Developer", "Software Engineer", "Creator", "Designer" ]'
         >
@@ -44,46 +43,75 @@
         </a>
         <span class="cursor"></span>
       </h1>
-      <button href="#connect" class="btn">Connect with me</button>
+      <!-- button to open modal -->
+      <button class="view-modal">Let's Connect</button>
+      <div class="popup">
+        <div class="modal-content">
+          <header>
+            <span></span>
+            <div class="close"><i class="uil uil-times"></i></div>
+          </header>
+          <div class="content">
+            <ul class="icons">
+              <div>
+                <a href="https://github.com/JPham4801" target="_blank" rel="noopener noreferrer"
+                  ><i class="fab fa-github"></i
+                ></a>
+                <span>GitHub</span>
+              </div>
+              <div>
+                <a href="https://www.linkedin.com/in/john-pham-799451222" target="_blank" rel="noopener noreferrer"
+                  ><i class="fab fa-linkedin"></i
+                ></a>
+                <span>LinkedIn</span>
+              </div>
+            </ul>
+            <p>or</p>
+            <div class="field">
+              <a href="./assets/files/myResume.pdf" download class="button-link"> Download my Resume </a>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section class="project-section section" id="projects">
+    <section class="project-section section" id="portfolio">
       <h1 class="section-header">Portfolio</h1>
       <div class="carousel">
         <button class="carousel__nav carousel__nav--prev" aria-label="Previous slide">‹</button>
-        <ul class="carousel__list">
+        <ul class="carousel__list" id="carousel">
           <li
             class="carousel__item"
             data-pos="-2"
-            data-url="https://www.google.com/"
-            data-description="Description for Petsy project"
-            id="petsy"
-          >
-            <img src="./assets/images/Petsy.png" alt="Petsy web preview" />
-          </li>
-          <li
-            class="carousel__item"
-            data-pos="-1"
-            data-url="https://www.google.com/"
-            data-description="Description for Cat Collector project"
-            id="cat-collector"
-          >
-            <img src="./assets/images/Cat-collector.png" alt="Cat collector web preview" />
-          </li>
-          <li
-            class="carousel__item"
-            data-pos="0"
-            data-url="https://www.google.com/"
-            data-description="Description for Wordle project"
+            data-url="https://jpham4801.github.io/wordle-game/"
+            data-description="Browser-based Wordle word game"
             id="wordle"
           >
             <img src="./assets/images/Wordle.png" alt="Wordle web preview" />
           </li>
           <li
             class="carousel__item"
+            data-pos="-1"
+            data-url="https://petsy-app.netlify.app/"
+            data-description="Online marketplace dedicated to all things made for pets!"
+            id="Petsy"
+          >
+            <img src="./assets/images/Petsy.png" alt="Petsy web preview" />
+          </li>
+          <li
+            class="carousel__item"
+            data-pos="0"
+            data-url="https://github.com/JPham4801"
+            data-description="View my codes on Github"
+            id="github"
+          >
+            <img src="./assets/images/github.png" alt="Github web preview" />
+          </li>
+          <li
+            class="carousel__item"
             data-pos="1"
-            data-url="https://www.google.com/"
-            data-description="Description for myPOV project"
+            data-url="https://mypov-0df71a3204c0.herokuapp.com/"
+            data-description="A social media platform for sharing your interest through your POV"
             id="myPOV"
           >
             <img src="./assets/images/myPOV.png" alt="myPOV web preview" />
@@ -91,7 +119,7 @@
           <li
             class="carousel__item"
             data-pos="2"
-            data-url="https://www.google.com/"
+            data-url="https://jpham4801-todo-app-9766fd1c2fc4.herokuapp.com/"
             data-description="Description for Task Buddy project"
             id="task-buddy"
           >
@@ -108,9 +136,46 @@
     <section class="about-section section" id="about">
       <h1 class="section-header">About Me</h1>
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias quod quaerat nemo nisi expedita veniam quam ipsa
-        blanditiis enim ducimus veritatis suscipit, molestiae ipsum. Inventore corrupti maxime quod animi natus.
+        I graduated from the University of Central Florida with a Bachelor's degree in Biomedical Sciences as a
+        pre-dental student. However, I have since discovered my true passion for web development and am now
+        enthusiastically pursuing it.
       </p>
+      <ul class="about-list">
+        <li>
+          <p>
+            <img src="./assets/icons/check-mark_5290070.png" alt="bullet point" /><span> Attention to Detail</span> I
+            feel strongly about understanding the inner workings of programming languages. My background in science
+            doesn't allow me to just solve problems, I strive to understand <i>how</i> and <i>why</i> solutions work.
+            Precision and clarity in my work are essential to me.
+          </p>
+        </li>
+        <li>
+          <p>
+            <img src="./assets/icons/check-mark_5290070.png" alt="bullet point" /><span>Commitment</span> Reliability is
+            one of my strongest traits. When I take on a task, I see it through with dedication, ensuring timely and
+            high-quality results. I take pride in delivering work that meets and exceeds expectations.
+          </p>
+        </li>
+        <li>
+          <p>
+            <img src="./assets/icons/check-mark_5290070.png" alt="bullet point" /><span>Fast Learner</span> Coding isn't
+            just something I picked up, it's something I genuinely enjoy. I'm always eager to expand my knowledge by
+            learning new languages and technologies, making me more efficient and adaptable in my daily work.
+          </p>
+        </li>
+        <li>
+          <p>
+            <a href="./assets/files/myResume.pdf" download class="download-link">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path
+                  d="M21,14a1,1,0,0,0-1,1v4a1,1,0,0,1-1,1H5a1,1,0,0,1-1-1V15a1,1,0,0,0-2,0v4a3,3,0,0,0,3,3H19a3,3,0,0,0,3-3V15A1,1,0,0,0,21,14Zm-9.71,1.71a1,1,0,0,0,.33.21.94.94,0,0,0,.76,0,1,1,0,0,0,.33-.21l4-4a1,1,0,0,0-1.42-1.42L13,12.59V3a1,1,0,0,0-2,0v9.59l-2.29-2.3a1,1,0,1,0-1.42,1.42Z"
+                ></path>
+              </svg>
+              Download my Resume
+            </a>
+          </p>
+        </li>
+      </ul>
     </section>
 
     <section class="skill-section section" id="skills">

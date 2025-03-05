@@ -1,3 +1,4 @@
+/*-------------------------------- Constants --------------------------------*/
 const carouselList = document.querySelector('.carousel__list');
 const carouselItems = document.querySelectorAll('.carousel__item');
 const elems = Array.from(carouselItems);
@@ -5,6 +6,8 @@ const items = Array.from(carouselList.children);
 const prevButton = document.querySelector('.carousel__nav--prev');
 const nextButton = document.querySelector('.carousel__nav--next');
 const descriptionText = document.getElementById('carousel-description-text');
+
+/*-------------------------------- Functions --------------------------------*/
 
 // typewriter effect
 
@@ -50,6 +53,29 @@ class TxtType {
     }, delta);
   };
 }
+
+// modal
+const viewBtn = document.querySelector('.view-modal'),
+  popup = document.querySelector('.popup'),
+  close = popup.querySelector('.close'),
+  field = popup.querySelector('.field'),
+  input = field.querySelector('input'),
+  copy = field.querySelector('button');
+
+viewBtn.onclick = () => {
+  popup.classList.toggle('show');
+};
+close.onclick = () => {
+  viewBtn.click();
+};
+// console log if i click outside of .popup
+window.onclick = (e) => {
+  console.log(e.target);
+  // if target is not .popup, not .view-modal, and not .popup field
+  if (e.target !== popup && e.target !== viewBtn && !popup.contains(e.target)) {
+    popup.classList.remove('show');
+  }
+};
 
 // carousel
 
@@ -152,3 +178,76 @@ window.onload = () => {
     descriptionText.textContent = activeItem.getAttribute('data-description');
   }
 };
+
+
+
+
+$(document).on('click', '.nav-menu a, .scrollto', function (e) {
+  if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+    e.preventDefault();
+    var target = $(this.hash);
+    if (target.length) {
+      var scrollto = target.offset().top;
+
+      $('html, body').animate(
+        {
+          scrollTop: scrollto,
+        },
+        1500,
+        'easeInOutExpo'
+      );
+
+      if ($(this).parents('.nav-menu, .mobile-nav').length) {
+        $('.nav-menu .active, .mobile-nav .active').removeClass('active');
+        $(this).closest('li').addClass('active');
+      }
+
+      if ($('body').hasClass('mobile-nav-active')) {
+        $('body').removeClass('mobile-nav-active');
+        $('.mobile-nav-toggle i').toggleClass('icofont-navigation-menu icofont-close');
+      }
+      return false;
+    }
+  }
+});
+
+$(document).on('click', '.mobile-nav-toggle', function (e) {
+  $('body').toggleClass('mobile-nav-active');
+  $('.mobile-nav-toggle i').toggleClass('icofont-navigation-menu icofont-close');
+});
+
+$(document).click(function (e) {
+  var container = $('.mobile-nav-toggle');
+  if (!container.is(e.target) && container.has(e.target).length === 0) {
+    if ($('body').hasClass('mobile-nav-active')) {
+      $('body').removeClass('mobile-nav-active');
+      $('.mobile-nav-toggle i').toggleClass('icofont-navigation-menu icofont-close');
+    }
+  }
+});
+
+// Navigation active state on scroll
+var nav_sections = $('section');
+var main_nav = $('.nav-menu, #mobile-nav');
+
+$(window).on('scroll', function () {
+  var cur_pos = $(this).scrollTop() + 10;
+
+  nav_sections.each(function () {
+    var top = $(this).offset().top,
+      bottom = top + $(this).outerHeight();
+
+    if (cur_pos >= top && cur_pos <= bottom) {
+      if (cur_pos <= bottom) {
+        main_nav.find('li').removeClass('active');
+      }
+      main_nav
+        .find('a[href="#' + $(this).attr('id') + '"]')
+        .parent('li')
+        .addClass('active');
+    }
+    if (cur_pos < 200) {
+      $('.nav-menu ul:first li:first').addClass('active');
+    }
+  });
+});
