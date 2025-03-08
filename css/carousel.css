@@ -58,6 +58,7 @@
   justify-content: center;
   perspective: 300px;
 }
+
 .carousel__item {
   display: flex;
   align-items: center;
@@ -77,51 +78,41 @@
   transition: transform 0.5s ease;
 }
 
-
 .carousel__item[data-pos='0'] {
   z-index: 5;
   cursor: pointer;
 }
+
 .carousel__item[data-pos='-1'],
 .carousel__item[data-pos='1'] {
   opacity: 0.7;
   filter: blur(1px) grayscale(10%);
 }
+
 .carousel__item[data-pos='-1'] {
   transform: translateX(-40%) scale(0.9);
   z-index: 4;
 }
+
 .carousel__item[data-pos='1'] {
   transform: translateX(40%) scale(0.9);
   z-index: 4;
 }
+
 .carousel__item[data-pos='-2'],
 .carousel__item[data-pos='2'] {
   opacity: 0.4;
   filter: blur(3px) grayscale(20%);
 }
+
 .carousel__item[data-pos='-2'] {
   transform: translateX(-70%) scale(0.8);
   z-index: 3;
 }
+
 .carousel__item[data-pos='2'] {
   transform: translateX(70%) scale(0.8);
   z-index: 3;
-}
-.carousel__item:nth-child(1) {
-  background: linear-gradient(45deg, #2d35eb 0%, #904ed4 100%);
-}
-.carousel__item:nth-child(2) {
-  background: linear-gradient(45deg, #2d35eb 0%, #fdbb2d 100%);
-}
-.carousel__item:nth-child(3) {
-  background: linear-gradient(45deg, #2d35eb 0%, #22c1c3 100%);
-}
-.carousel__item:nth-child(4) {
-  background: linear-gradient(45deg, #fdbb2d 0%, #904ed4 100%);
-}
-.carousel__item:nth-child(5) {
-  background: linear-gradient(45deg, #22c1c3 0%, #904ed4 100%);
 }
 
 @media (max-width: 1200px) {
@@ -178,9 +169,11 @@
     top: 74%;
     height: 40%;
   }
+  
   .carousel__nav--prev {
     left: calc(130% - 240px - 100px);
   }
+
   .carousel__nav--next {
     right: calc(130% - 240px - 100px);
   }
