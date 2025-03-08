@@ -157,19 +157,35 @@
 }
 
 @media (max-width: 576px) {
+  .carousel {
+    width: 100%;
+    height: auto;
+  }
+
   .carousel__item {
-    width: 100px;
+    width: 100%;
+    height: auto;
+  }
+
+  .carousel__list img {
+    display: flex;
+    width: 500%;
+    height: auto;
   }
 
   .carousel__nav {
     font-size: 5rem;
-    top: 95%;
+    top: 74%;
     height: 40%;
   }
   .carousel__nav--prev {
-    left: calc(96% - 240px - 100px);
+    left: calc(130% - 240px - 100px);
   }
   .carousel__nav--next {
-    right: calc(96% - 240px - 100px);
+    right: calc(130% - 240px - 100px);
+  }
+
+  .skill-content ul {
+    justify-content: flex-start;
   }
 }
