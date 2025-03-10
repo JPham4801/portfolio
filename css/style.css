@@ -118,7 +118,7 @@ li {
 }
 
 .section-header::after {
-  content: "";
+  content: '';
   position: absolute;
   left: 0;
   bottom: -5px;
@@ -243,11 +243,10 @@ li {
   align-items: center;
   gap: 8px;
   text-decoration: none;
-  color: #007BFF;
+  color: #007bff;
   font-weight: bold;
   transition: color 0.3s ease-in-out;
 }
-
 
 .download-link svg {
   width: 35px;
@@ -256,16 +255,13 @@ li {
   transition: transform 0.2s ease-in-out;
 }
 
-
 .download-link:hover {
   color: #0056b3;
 }
 
-
 .download-link:hover svg {
   transform: scale(1.2);
 }
-
 
 /* footer styling start */
 
@@ -330,7 +326,7 @@ footer {
     padding: 4rem 1.5rem;
   }
 
-  .skill-card img{
+  .skill-card img {
     height: 35px;
   }
 }

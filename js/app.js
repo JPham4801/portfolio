@@ -55,6 +55,7 @@ class TxtType {
 }
 
 // modal
+
 const viewBtn = document.querySelector('.view-modal'),
   popup = document.querySelector('.popup'),
   close = popup.querySelector('.close'),
@@ -178,9 +179,6 @@ window.onload = () => {
     descriptionText.textContent = activeItem.getAttribute('data-description');
   }
 };
-
-
-
 
 $(document).on('click', '.nav-menu a, .scrollto', function (e) {
   if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {

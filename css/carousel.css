@@ -169,7 +169,7 @@
     top: 74%;
     height: 40%;
   }
-  
+
   .carousel__nav--prev {
     left: calc(130% - 240px - 100px);
   }
